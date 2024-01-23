@@ -134,7 +134,7 @@ public class MFAFilter extends GenericFilterBean {
                 checkMfaStatus(userDetails);
 
                 String mfaSecret = TimeBasedOneTimePasswordUtil.generateBase32Secret();
-                final String qrData = TimeBasedOneTimePasswordUtil.generateOtpAuthUrlOri(username + "@OMG.ccbft.com", mfaSecret);
+                final String qrData = TimeBasedOneTimePasswordUtil.generateOtpAuthUrlOri(username + "@OM", mfaSecret);
                 String qrImg = ZxingPngQrGenerator.generateBase64QRPng(qrData);
                 //TODO updateUserMfa(username);
                 Map<String, Object> data = new HashMap<>();
