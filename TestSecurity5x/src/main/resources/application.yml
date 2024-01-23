@@ -1,0 +1,13 @@
+server:
+  port: 8883
+
+spring:
+  main:
+    allow-circular-references: true
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+    demo:
+      ss: DEBUG
