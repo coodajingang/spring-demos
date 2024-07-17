@@ -1,0 +1,22 @@
+server:
+  port: 9000
+
+logging:
+  level:
+    org.springframework.cloud.consul: DEBUG
+
+spring:
+  application:
+    name: payment-service
+  config:
+    import: optional:consul:localhost:8500
+  cloud:
+    consul:
+      port: 8500
+      host: localhost
+      config:
+        format: yaml
+        data-key: data
+#        prefixes:
+#          - /config/payment-service
+#          - /config/application

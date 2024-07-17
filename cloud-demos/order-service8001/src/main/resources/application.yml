@@ -1,0 +1,10 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: order-service
+
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
